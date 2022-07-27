@@ -1,0 +1,35 @@
+.page {
+  background-color: #f2f6fa;
+
+  &__body--with-menu {
+    overflow: hidden;
+  }
+
+  &__testimonials {
+    margin-bottom: 120px;
+  }
+
+  &__form {
+    margin-bottom: 80px;
+
+    @include medium {
+      margin-bottom: 120px;
+    }
+
+    @include large {
+      margin-bottom: 104px;
+    }
+  }
+
+  &__contact-us {
+    margin-bottom: 80px;
+
+    @include medium {
+      margin-bottom: 120px;
+    }
+
+    @include large {
+      margin-bottom: 0;
+    }
+  }
+}

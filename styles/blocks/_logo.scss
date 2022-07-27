@@ -1,0 +1,8 @@
+.logo {
+  display: flex;
+  transition-duration: $transitionDuration;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

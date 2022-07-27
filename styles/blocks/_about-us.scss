@@ -1,0 +1,43 @@
+.about-us {
+  padding: 120px 20px;
+
+  @include medium {
+    padding: 120px 41px;
+  }
+
+  @include large {
+    padding: 120px 0;
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    @include large {
+      max-width: 716px;
+    }
+  }
+
+  &__tittle {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    text-align: center;
+    color: #253757;
+
+    margin-bottom: 24px;
+
+    @include medium {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    color: $secondColor;
+  }
+}

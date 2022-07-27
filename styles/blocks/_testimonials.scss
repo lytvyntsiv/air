@@ -1,0 +1,174 @@
+.testimonials {
+  font-family: 'Poppins';
+
+  &__text {
+    margin-bottom: 48px;
+    
+    @include medium {
+      max-width: 200px;
+    }
+  }
+
+  &__tittle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    color: #253757;
+
+    &::before {
+      content: 'Testimonials';
+      display: block;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C0CDD7;
+    }
+  }
+
+  &__wrapper {
+    @include large {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    @include extraLarge {
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 32px 42px;
+    margin-bottom: 24px;
+
+    background-color: #fff;
+    box-shadow: 0px 9px 18px rgba(37, 41, 49, 0.03);
+    border-radius: 16px;
+
+    @include medium {
+      margin-bottom: 30px;
+    }
+
+    @include large {
+      max-width: 360px;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 196px;
+    width: 196px;
+    margin-bottom: 24px;
+
+    &:hover {
+      .testimonials__square:nth-child(1) {
+        left: -38px;
+        top: 75px;
+        transform: rotate(-90deg);
+        box-shadow: 0 0 10px $colorMain;
+      }
+
+      .testimonials__square:last-child {
+        right: -38px;
+        bottom: 75px;
+        transform: rotate(-90deg);
+        box-shadow: 0 0 10px $colorMain;
+      }
+
+      .testimonials__avatar {
+        transform: scale(1.3);
+        box-shadow:0 0 15px $colorMain;
+      }
+    }
+  }
+
+  &__avatar {
+    height: 108px;
+    width: 108px;
+
+    border-radius: 50%;
+
+    object-position: center;
+    object-fit: cover;
+    z-index: 1;
+
+    transition-property: transform, box-shadow;
+    transition-duration: 0.6s;
+  }
+
+  &__square {
+    position: absolute;
+
+    width: 108px;
+    height: 44px;
+
+    background-color: $colorMain;
+
+    border-radius: 12px;
+    transform: rotate(-60deg);
+    transition-property: bottom, top, right, left, transform ;
+    transition-duration: 0.4s;
+    
+    &:first-child {
+      left: 5px;
+      top: 40px;
+    }
+
+    &:last-child{
+      right: 5px;
+      bottom: 40px;
+    }
+  }
+
+  &__response {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    color: $secondColor;
+
+    margin-bottom: 16px;
+
+    &::before {
+      content: '';
+      display: block;
+
+      width: 24px;
+      height: 24px;
+      margin: 0 auto;
+      padding-bottom: 8px;
+      
+      background-image: url(../images/icons/quotes.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__name {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    color: #253757;
+
+    margin-bottom: 4px;
+  }
+
+  &__position {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C0CDD7;
+  }
+}

@@ -1,0 +1,10 @@
+.banner {
+  position: relative;
+  
+  @include large {
+    height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
